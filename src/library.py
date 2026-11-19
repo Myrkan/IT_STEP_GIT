@@ -9,7 +9,8 @@ while True:
     if choice == "1":
         name = input("Введіть ваше ім'я: ")
         book = input("Введіть назву книжки: ")
-        print(f"Книжку {book} видано читачеві {name}")
+        days = int(input("На скільки днів: "))
+        print(f"Книжку {book} видано читачеві {name} на {days} днів")
     elif choice == "2":
         name = input("Введіть ваше ім'я: ")
         book = input("Введіть назву книжки: ")
