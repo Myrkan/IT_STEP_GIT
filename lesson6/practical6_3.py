@@ -19,3 +19,64 @@ for i in range(len(numbers)):
     if numbers[i] > 10:
         numbers[i] = 0
 print("После замены чисел > 10 на 0:", numbers)
+
+
+# Завдання 2
+# Користувач вводить числа, поки не введе -1.
+# Збережіть усі ці числа в список. Виведіть їхню кількість,
+# суму, мінімальне, максимальне та середнє.
+# Скористайтесь функціями min, max, sum, len
+
+numbers = []
+
+while True:
+    num = int(input("Введите число (-1-выход): "))
+    if num == -1:
+        break
+    numbers.append(num)
+
+print("Количество чисел:", len(numbers))
+print("Сумма:", sum(numbers))
+print("Минимальное:", min(numbers))
+print("Максимальное:", max(numbers))
+print("Среднее:", sum(numbers) / len(numbers))
+
+
+# Завдання 3
+# Користувач вводить числа, поки не введе 0. Створіть
+# два нових списки: з додатніми та від’ємними числами.
+# Виведіть елементи обох списків на екран.
+# Виправіть помилку в коді
+
+while True:
+    number = int(input("Введіть число (0 для завершення): "))
+
+    positive = []
+    negative = []
+
+    if number < 0:
+        positive.append(number)
+    else:
+        negative.append(number)
+
+print("Додатні числа:", positive)
+print("Від'ємні числа:", negative)
+
+# исправление
+
+positive = []  # создаем списки один раз, а не каждый цикл
+negative = []
+
+while True:
+    number = int(input("Введіть число (0 для завершення): "))
+
+    if number == 0:  # 0 — добавляем для выхода
+        break
+
+    if number > 0:  # положительные-только > 0
+        positive.append(number)
+    else:  # здесь будут только отрицательные <0
+        negative.append(number)
+
+print("Додатні числа:", positive)
+print("Від'ємні числа:", negative)
