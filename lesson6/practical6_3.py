@@ -80,3 +80,26 @@ while True:
 
 print("Додатні числа:", positive)
 print("Від'ємні числа:", negative)
+
+# Завдання 4
+# Користувач вводить зарплати співробітників, поки не
+# введе -1. Після чого вводить відсоток на який треба
+# збільшити усім зарплату.
+# Виведіть нові зарплати
+
+salaries = []
+
+while True:
+    salary = float(input("Введите зарплату (-1 для выхода): "))
+    if salary == -1:
+        break
+    salaries.append(salary)
+
+percent = float(input("Введите процент повышения: "))
+
+for i in range(len(salaries)):
+    salaries[i] = salaries[i] + salaries[i] * percent / 100
+
+print("Новые зарплаты:")
+for salary in salaries:
+    print(salary)
